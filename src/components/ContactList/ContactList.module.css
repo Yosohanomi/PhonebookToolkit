@@ -1,0 +1,155 @@
+.container {
+    background: #ffffdb;
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(50, 58, 66, 0.1);
+}
+
+.title {
+    color: #323a42;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.title::before {
+    content: "₊⊹ ";
+    color: #81a6cc;
+}
+
+.title::after {
+    content: " ₊⊹";
+    color: #81a6cc;
+}
+
+.contactList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+}
+
+.contactItem {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #81a6cc;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contactItem:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(50, 58, 66, 0.1);
+}
+
+.contactInfo {
+    flex: 1;
+}
+
+.contactName {
+    color: #323a42;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.contactName::before {
+    content: "❀ ";
+    color: #81a6cc;
+    font-size: 0.9rem;
+}
+
+.contactPhone {
+    color: #81a6cc;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.contactEmail {
+    color: #81a6cc;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.deleteButton {
+    background: #81a6cc;
+    color: #ffffdb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 30px 30px 30px 15px;
+    min-width: 90px;
+}
+
+.deleteButton::before {
+    content: "☁️";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.deleteButton:hover {
+    background: #323a42;
+    border-radius: 30px 15px 30px 30px;
+    padding-right: 25px;
+}
+
+.deleteButton:hover::before {
+    opacity: 1;
+}
+
+.deleteButton:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .contactItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .deleteButton {
+        align-self: flex-end;
+        border-radius: 25px 25px 25px 10px;
+    }
+    
+    .deleteButton:hover {
+        border-radius: 25px 10px 25px 25px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contactList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contactItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .deleteButton {
+        align-self: flex-end;
+    }
+}
+@media (min-width: 1024px) {
+    .contactList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

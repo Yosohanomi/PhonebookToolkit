@@ -1,0 +1,55 @@
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffffdb 0%, #e8f0f8 100%);
+    padding: 20px;
+}
+
+.content {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: transparent;
+    padding: 20px;
+}
+
+.mainTitle {
+    text-align: center;
+    color: #323a42;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(129, 166, 204, 0.2);
+}
+
+.mainTitle::before {
+    content: "₊⊹ ";
+    color: #81a6cc;
+    font-size: 2rem;
+}
+
+.mainTitle::after {
+    content: " ₊⊹";
+    color: #81a6cc;
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .content {
+        padding: 10px;
+    }
+    
+    .mainTitle {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mainTitle {
+        font-size: 2.2rem;
+    }
+}
